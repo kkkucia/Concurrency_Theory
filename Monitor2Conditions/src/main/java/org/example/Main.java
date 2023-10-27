@@ -7,11 +7,11 @@ import org.example.threads.Producer;
 
 
 public class Main {
-    private static final int PRODUCERS_NUM = 2;
+    private static final int PRODUCERS_NUM = 1;
     private static final int BIG_PRODUCERS_NUM = 1;
     private static final int CONSUMERS_NUM = 1;
     private static final int MIN_VALUE = 1;
-    private static final int MAX_VALUE = 10;
+    private static final int MAX_VALUE = 5;
 
 
     public static void main(String[] args) {

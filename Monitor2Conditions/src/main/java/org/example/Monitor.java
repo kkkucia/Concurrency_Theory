@@ -28,7 +28,7 @@ public class Monitor {
                 producersCond.await();
             }
             bufferValue += toProduce;
-            System.out.println("Producer: " + Thread.currentThread().getName() + " ; Produkuje " + toProduce + " ; Buffor " + bufferValue);
+            System.out.println("Producer: " + Thread.currentThread().getName() + " ; Produkuje       " + toProduce + " ; Buffor " + bufferValue);
             consumersCond.signal();
 
         } catch (InterruptedException e) {
@@ -46,7 +46,7 @@ public class Monitor {
                 consumersCond.await();
             }
             bufferValue -= toConsume;
-            System.out.println("Consumer: " + Thread.currentThread().getName() + " ; Konsumuje  " + toConsume + " ; Buffor " + bufferValue);
+            System.out.println("Consumer: " + Thread.currentThread().getName() + " ; Konsumuje       " + toConsume + " ; Buffor " + bufferValue);
             producersCond.signal();
 
         } catch (InterruptedException e) {
