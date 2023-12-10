@@ -42,6 +42,10 @@ public class Monitor implements IMonitor {
         bufferProducerList = new ArrayList<>();
     }
 
+//    HasWaiters() powoduje, że nowy wątek wchodzi sobie i ignoruje wszystkich.
+//    Dla rozwiązania z boolean chcemy sprawdzić czy wątek z priorytetem został dopuszczony, a nie czy monitor ma jakieś wątki czekające.
+
+
     public void produce(int toProduce, String producerName) {
         String info = producerName + "(" + toProduce + ")";
         try {
@@ -128,9 +132,9 @@ public class Monitor implements IMonitor {
         System.out.println(
                 "OCZEKUJĄCY: " +
                         "Pierwszy producent: " + YELLOW + firstProducerList + END + " " +
-                        "Zasoby  producent: " + YELLOW + bufferProducerList + END + " " +
+                        "Zasoby producent: " + YELLOW + bufferProducerList + END + " " +
                         "Pierwszy konsument: " + YELLOW + firstConsumerList + END + " " +
-                        "Zasoby  konsument: " + YELLOW + bufferConsumerList + END + "\n");
+                        "Zasoby konsument: " + YELLOW + bufferConsumerList + END + "\n");
     }
 }
 

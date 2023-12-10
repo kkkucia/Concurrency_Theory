@@ -126,9 +126,9 @@ public class MonitorDeadlock implements IMonitor {
         System.out.println(
                 "OCZEKUJĄCY: " +
                         "Pierwszy producent: " + YELLOW + firstProducerList + END + " " +
-                        "Zasoby  producent: " + YELLOW + bufferProducerList + END + " " +
+                        "Zasoby producent: " + YELLOW + bufferProducerList + END + " " +
                         "Pierwszy konsument: " + YELLOW + firstConsumerList + END + " " +
-                        "Zasoby  konsument: " + YELLOW + bufferConsumerList + END + "\n");
+                        "Zasoby konsument: " + YELLOW + bufferConsumerList + END + "\n");
     }
 }
 
